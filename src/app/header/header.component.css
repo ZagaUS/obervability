@@ -44,8 +44,8 @@ html {
     text-decoration: none;
   }
 
-  nav a.videos:hover {
-    color: blue;
+
+  nav a:hover {
+    color: #ffcc00; /* Change the color to your desired hover color */
   }
-  
   
