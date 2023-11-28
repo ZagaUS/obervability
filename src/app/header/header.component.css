@@ -1,0 +1,51 @@
+html {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0b0e11;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: "10px";
+    z-index: 1000;
+  }
+
+  header div {
+    color: #fff;
+    padding: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding-right: 100px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav a.videos:hover {
+    color: blue;
+  }
+  
+  

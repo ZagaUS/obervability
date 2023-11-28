@@ -1,0 +1,49 @@
+.landing-section {
+    text-align: center;
+    padding: 50px 0; 
+    font-size: 26px;
+  }
+
+  h1 {
+    margin-top: 100px;
+  }
+
+  .box-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .box {
+    position: relative; 
+    background-color: #020203;
+    color: #fff; 
+    padding: 30px;
+    border: 1px solid #02070a; 
+    border-radius: 7px;
+    width: 30%; 
+    margin: 10px 0;
+    height: 300px;
+  }
+
+  .read-more {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding-right: 90px;
+    font-size: 15px;
+  }
+
+.read-more:hover {
+  color: #989da1;
+}
+
+.github-logo {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+}
+
