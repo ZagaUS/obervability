@@ -6,7 +6,7 @@
       <div class="box-container">
           <div class="box">Observability
             <a href="#observability"  class="read-more"  (click)="scrollToObservability()">Read More</a>
-            <a href="#" class="github-logo">
+            <a href="https://github.com/ZagaUS/obeservAi-zaga" class="github-logo">
             <!-- href="https://github.com/your-username/your-repository/blob/master/path-to-your-source-file" target="_blank"> -->
               <img src="assets/github.png" alt="github-logo" width="30" height="30">
           </a>
@@ -18,8 +18,8 @@
   
         <div class="box">Sustainability
   
-          <a href="#sustainability" class="read-more" (click)="scrollToObservability()">Read More</a>
-          <a href="#" class="github-logo">
+          <a href="#sustainability" class="read-more" (click)="scrollToSustainability()">Read More</a>
+          <a href="https://github.com/ZagaUS/obeservAi-zaga" class="github-logo">
           <!-- href="https://github.com/your-username/your-repository/blob/master/path-to-your-source-file" target="_blank"> -->
             <img src="assets/github.png" alt="github-logo" width="30" height="30">
         </a>
@@ -33,21 +33,9 @@
   
   <br><br><br><br><br><br><br><br>
   
-  
-    <section id="observability" class="landing-section">
-      <h1><b>Observability</b></h1>
-    </section>
-  
-  
-  
-  
-    <br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br>
-  
-  
-    <section id="sustainability" class="landing-section">
-      <h1><b>Sustainability</b></h1>
-    </section>
-  
+  <app-observability *ngIf="showObservability"></app-observability>
+
+    <app-sustainability *ngIf="showSustainability"></app-sustainability>  
   
      </div>
     </section>

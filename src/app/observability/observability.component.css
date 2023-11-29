@@ -1,0 +1,53 @@
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin: 20px;
+    font-size: 50px;
+  }
+
+h2 {
+    padding: 30px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin: 20px;
+    font-size: 30px;
+  }
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .grid-cell {
+    /* position: relative; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 200px; 
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #fcf8f8;
+    transition: background-color 0.3s ease;
+  }
+
+  .grid-cell:hover {
+    background-color: #dcece5; /* Change the background color on hover */
+  }
+
+
