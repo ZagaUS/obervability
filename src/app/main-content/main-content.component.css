@@ -17,7 +17,7 @@
 
   .box {
     position: relative; 
-    background-color: #989da1;
+    background-color: #cfe3f4;
     color: black;
     padding: 30px;
     border: 1px solid #02070a; 
@@ -41,7 +41,7 @@
   }
 
 .read-more:hover {
-  color: #989da1;  
+  color: #84847b;  
 }
 
 .github-logo {
