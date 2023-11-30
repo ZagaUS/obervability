@@ -6,3 +6,28 @@
 *{
     margin: 0;
 }
+
+
+/* body {
+    background-color: #031336;
+    color: white;
+  } */
+  /* #031336 #989da1 */
+
+  html {
+    height: 100%;
+    background-color: #e9eaec; 
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #031336; */
+    /* background: linear-gradient(#1945a3, #031336, #031336,#1945a3); */
+    background: linear-gradient(to top right, #1945a3, #031336, #1945a3 , #031336, #1945a3);
+    color: black;
+    width: 100%;
+} 
