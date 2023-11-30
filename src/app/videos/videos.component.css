@@ -34,3 +34,9 @@ iframe {
     height: 315px;
     width: 350px;
 }
+
+
+.video-container iframe {
+    filter: drop-shadow(10px 10px 5px rgb(140, 134, 134));
+    border: 1px solid transparent; /* Add a transparent border to fix artifacts */
+}
