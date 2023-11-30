@@ -42,12 +42,12 @@ html {
   }
 
   nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
   }
 
 
   nav a:hover {
-    color: #bcbcd6; /* Change the color to your desired hover color */
+    color: #ddd432; /* Change the color to your desired hover color */
   }
   
