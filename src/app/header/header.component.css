@@ -20,7 +20,7 @@ html {
     z-index: 1000;
   }
 
-  header div {
+  header .logo {
     color: #fff;
     padding: 25px;
     padding-left: 100px;
@@ -53,33 +53,37 @@ html {
 
 /* Add this style for the dropdown */
 .dropdown {
-  position: relative;
-  box-sizing: content-box;
+  /* position: relative; */
+  /* box-sizing: content-box; */
   /* display: inline-block; */
 }
 
-/* Style for the dropdown content */
-.dropdown-content {
+/* Hide the submenu by default */
+.submenu {
   display: none;
   position: absolute;
-  /* top: 100%;  */
-  width: 20px;
-  background-color: #f9f9f9;
+  width: 120px;
+  background-color: #fff; /* Change as needed */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
 }
 
-.dropdown-content a {
+/* Show the submenu on hover */
+li:hover .submenu {
   display: block;
-  padding: 10px;
+}
+
+/* Style the submenu links */
+.submenu a {
+  display: block;
+  color: #333; /* Change as needed */
   text-decoration: none;
-  color: #333;
-
+  margin: 15px;
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
-
+/* Optional: Style the main menu link */
+.menu a {
+  text-decoration: none;
+  color: #000; /* Change as needed */
+  font-size: 10px;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}

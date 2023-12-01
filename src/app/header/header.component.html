@@ -1,19 +1,17 @@
 <header>
-    <div>
+    <div class="logo" >
         <h1>ZAGA OPEN SOURCE</h1>
     </div>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Blog</a></li>
-            <li class="dropdown">
-                <a href="#">Documentation</a>
-                <div class="dropdown-content">
-                  <!-- Add links for Observability and Sustainability components -->
-                  <a routerLink="/documentation/observability">Observability</a>
-                  <a routerLink="/documentation/sustainability">Sustainability</a>
-                </div>
-              </li>
+            <li><a href="#">Documentation</a>
+                <div class="submenu">
+                    <a href="/documentation/observability"  >Observability</a>
+                    <a href="/documentation/sustainability"  >Sustainability</a>
+                  </div>
+            </li>
             <li><a href="/videos">Videos</a></li>
         </ul>
     </nav>
