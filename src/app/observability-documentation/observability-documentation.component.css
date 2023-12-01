@@ -5,7 +5,7 @@
     margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding-left: 550px;
   }
   h1 {
@@ -20,27 +20,24 @@
     justify-content: center;
     text-align: justify;
   }
-  
-  /* Heading styles */
+ 
   .observability h1,
   .observability h2,
   .observability h3,
   .observability h4 {
-    color: #333; /* Set your desired text color */
+    color: #333;
   }
   
-  /* Paragraph styles */
+
   .observability p {
     line-height: 1.5;
-    color: #555; /* Set your desired text color */
+    color: #555; 
   }
   
-  /* Feature container styles */
   .observability .feature {
     margin-bottom: 20px;
   }
-  
-  /* Styling for specific elements */
+
   .observability h2 {
     margin-top: 30px;
   }
@@ -49,5 +46,5 @@
     margin-top: 20px;
   }
   
-  /* Add more styles as needed */
+
   

@@ -46,44 +46,39 @@ html {
 
 
   nav a:hover {
-    color: #ffcc00; /* Change the color to your desired hover color */
+    color: #ffcc00; 
   }
 
- /* header.component.css */
 
-/* Add this style for the dropdown */
-.dropdown {
-  /* position: relative; */
-  /* box-sizing: content-box; */
-  /* display: inline-block; */
-}
-
-/* Hide the submenu by default */
 .submenu {
   display: none;
   position: absolute;
   width: 120px;
-  background-color: #fff; /* Change as needed */
-  overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+  background-color: #fff;
+  overflow-y: auto;
 }
 
-/* Show the submenu on hover */
+
 li:hover .submenu {
   display: block;
 }
 
-/* Style the submenu links */
 .submenu a {
   display: block;
-  color: #333; /* Change as needed */
+  color: #333; 
   text-decoration: none;
   margin: 15px;
 }
 
-/* Optional: Style the main menu link */
+
 .menu a {
   text-decoration: none;
-  color: #000; /* Change as needed */
+  color: #000; 
   font-size: 10px;
+}
+
+.submenu
+a:hover {
+  color: #065354da;
 }
 
