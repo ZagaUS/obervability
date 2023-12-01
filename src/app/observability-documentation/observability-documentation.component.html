@@ -1,1 +1,83 @@
-<p>observability-documentation works!</p>
+<div class="observability">
+    <h1>ZAGA Observability</h1>
+    <h2>Introduction</h2>
+    <p>
+      In today's complex digital landscape, gaining insight into the inner workings of applications is not just advantageous – it's essential. Our Observability solution serves as your gateway to unparalleled visibility into every aspect of your system, providing a real-time comprehensive view of performance, errors, and dependencies. The ZAGA Observability platform is an open-source observability product designed to monitor applications and swiftly troubleshoot problems.
+    </p>
+  
+    <h3>Key Features of Our Observability Solution</h3>
+    <div class="feature">
+      <h4>Traces:</h4>
+      <p>Track the journey of requests through your microservices, identifying bottlenecks and optimizing performance.</p>
+    </div>
+  
+    <div class="feature">
+      <h4>Metrics:</h4>
+      <p>Monitor and analyze key performance indicators to ensure optimal system functionality.</p>
+    </div>
+  
+    <div class="feature">
+      <h4>Logs:</h4>
+      <p>Dive deep into structured logs to comprehend events and behaviors, enabling proactive and reactive strategies.</p>
+    </div>
+  
+    <div class="feature">
+      <h4>Monitoring:</h4>
+      <p>Gain real-time insights into the health and performance of your applications.</p>
+    </div>
+  
+    <div class="feature">
+      <h4>Troubleshooting:</h4>
+      <p>Swiftly identify and resolve issues with detailed diagnostics and actionable intelligence.</p>
+    </div>
+  
+    <h2>Getting Started</h2>
+    <p>Easily integrate the ZAGA Observability solution into your systems and monitor applications deployed across various platforms by enabling instrumentation.</p>
+  
+    <h2>How ZAGA Observability Solution Works</h2>
+    <p>
+      Our Observability solution operates using OpenTelemetry, an open-source observability framework. It offers a suite of APIs, libraries, agents, instrumentation, and standards to facilitate observability across various distributed system services and components.
+    </p>
+  
+    <h3>Instrumentation:</h3>
+    <div class="feature">
+      <h4>Manual Instrumentation:</h4>
+      <p>Developers leverage OpenTelemetry libraries to instrument their code, collecting trace information, metrics, and logs within the application's codebase.</p>
+    </div>
+  
+    <div class="feature">
+      <h4>Auto Instrumentation:</h4>
+      <p>Post-deployment, the application can be effortlessly instrumented.</p>
+    </div>
+  
+    <h3>Tracing:</h3>
+    <p>
+      OpenTelemetry enables users to trace the flow of requests as they move through diverse services and components. Each trace comprises spans, representing individual units of work or operations within a service and containing information such as start and end times, duration, associated attributes, and context propagation details.
+    </p>
+  
+    <h3>Metrics:</h3>
+    <p>
+      OpenTelemetry supports the collection of metrics, allowing monitoring and measurement of various aspects of application performance, resource utilization, and custom business metrics. Metrics offer aggregated and time-series data to identify trends and anomalies.
+    </p>
+  
+    <h3>Logging:</h3>
+    <p>
+      OpenTelemetry streamlines the generation of structured logs that offer additional context during debugging and troubleshooting. These logs capture pertinent information about events, errors, or significant activities within the application.
+    </p>
+  
+    <h3>Exporter:</h3>
+    <div class="feature">
+      <p>OpenTelemetry supports various exporters to send the collected telemetry data to observability backends, such as tracing and metrics databases. The Observability solution exports the data to Kafka.</p>
+    </div>
+  
+    <h3>Kafka:</h3>
+    <div class="feature">
+      <p>Kafka serves as the backbone for efficient collection and distribution of telemetry data, enabling seamless data processing and streamlined communication within the Observability infrastructure.</p>
+    </div>
+  
+    <h3>Observability Backend:</h3>
+    <div class="feature">
+      <p>Our observability backend receives and stores the telemetry data for analysis and visualization. This data is then queried by another Backend application, and the data is viewed using the front-end application.</p>
+    </div>
+  </div>
+  

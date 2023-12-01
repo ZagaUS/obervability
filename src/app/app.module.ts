@@ -30,7 +30,8 @@ import { ObservabilityDocumentationComponent } from './observability-documentati
        RouterModule.forRoot([
         { path: 'videos', component: VideosComponent }, 
         { path: 'observability', component: ObservabilityComponent},
-        { path: 'sustainability', component: SustainabilityComponent}
+        { path: 'sustainability', component: SustainabilityComponent},
+        { path: 'documentation/observability', component: ObservabilityDocumentationComponent}
             ]),
   ],
   providers: [],

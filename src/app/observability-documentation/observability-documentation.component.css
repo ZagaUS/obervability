@@ -1,0 +1,53 @@
+.observability{
+    margin-top: 85px;
+    /* background: linear-gradient(to top right,#5680E9,#84CEEB,#5AB9EA,#C1C8E4,#8860D0); */
+    background: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    padding-left: 550px;
+  }
+  h1 {
+    margin-top: 100px;
+  }
+
+  p {
+
+    max-width: 800px;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+  }
+  
+  /* Heading styles */
+  .observability h1,
+  .observability h2,
+  .observability h3,
+  .observability h4 {
+    color: #333; /* Set your desired text color */
+  }
+  
+  /* Paragraph styles */
+  .observability p {
+    line-height: 1.5;
+    color: #555; /* Set your desired text color */
+  }
+  
+  /* Feature container styles */
+  .observability .feature {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for specific elements */
+  .observability h2 {
+    margin-top: 30px;
+  }
+  
+  .observability h3 {
+    margin-top: 20px;
+  }
+  
+  /* Add more styles as needed */
+  
