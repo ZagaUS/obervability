@@ -63,23 +63,36 @@ html {
   display: none;
   position: absolute;
   /* top: 100%;  */
-  width: 20px;
+  width: 10px;
   background-color: #f9f9f9;
 }
 
+
+
 .dropdown-content a {
-  display: block;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-bottom: 1px;
+  padding-left: 0px;
   text-decoration: none;
   color: #333;
-
+  margin: 0;
+  box-sizing: border-box;
 }
+
 
 .dropdown-content a:hover {
   background-color: #ddd;
+  color: rgb(80, 80, 204);
 
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
