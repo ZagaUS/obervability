@@ -7,7 +7,7 @@
 
   h1 {
     margin-top: 200px;
-    color:aliceblue;
+    color: black;
   }
 
   .box-container {
@@ -17,7 +17,7 @@
 
   .box {
     position: relative; 
-    background-color: #cfe3f4;
+    background-color: #f0f7ff;
     color: black;
     padding: 30px;
     border: 1px solid #02070a; 
