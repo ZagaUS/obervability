@@ -742,6 +742,7 @@ Banner Style
   background-repeat: no-repeat;
   background-size: cover;
   padding: 120px 20% 100px 20%;
+  height: 30rem;
   margin-top: 0px;
 }
 
@@ -1842,6 +1843,8 @@ Side-nav Style
   margin-bottom: 40px;
   font-size: 16px;
   line-height: 26px;
+  top: 132px; /* Adjust based on the height of your header */
+
   text-align: left;
   /* text-transform: uppercase; */
   color: #000;
@@ -1864,16 +1867,17 @@ Side-nav Style
 }
 .scroll-holder .sticky-side .holder.fixed {
   position: sticky;
-   /* z-index: 1; */
-  /* top: 132px; */
+  top: 100px;
 }
 
 .side-nav a:hover,
-.side-nav .current a {
+.side-nav li.current a {
   color: #F55328;
 } 
+
+
 .scroll-sec {
-  overflow: scroll;
+  /* overflow: scroll; */
   padding-top: 6%;
   /* padding-bottom: 3%; */
   width: 75%;
@@ -1888,14 +1892,9 @@ Side-nav Style
   padding-right: 55px;
 }
 
-/* .section-about {
-  padding-top: 200px;
-} */
 
 .section-about .scroll-holder .sticky-side .holder {
-  /* max-width: 900px; */
   min-width: 300px;
-  height: fit-content;
   margin-left: 0;
 }
 
@@ -1936,14 +1935,6 @@ Side-nav Style
   margin: 0 auto;
 }
 
-  /* .container {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-  } */
 
 .sidenav-container {
   padding-left: 16px;
@@ -1951,7 +1942,7 @@ Side-nav Style
 
 }
 
-.section-about .scroll-holder .sticky-side .holder .banner-item {
+.section-about .scroll-holder .sticky-side .holder {
   margin: auto;
   width: 100%;
 
@@ -1961,139 +1952,4 @@ Side-nav Style
   margin: 0;
 }
 
-.values {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  padding: 3px 0 30px;
 
-}
-
-.values .value-item {
-  width: calc(50% - 30px);
-  padding: 45px;
-  margin-top: 32px;
-  padding-bottom: 30px;
-  margin-left: 30px;
-  background: #FFFFFF;
-  box-shadow: 0px 8px 48px rgba(37, 35, 42, 0.1);
-}
-
-.values .value-item .icon {
-  float: left;
-  margin-right: 25px;
-  border: 1px solid rgba(246, 87, 41, 0.2);
-  width: 80px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 80px;
-  padding-bottom: 10px;
-  border-radius: 0 0 40px 0;
-  margin-bottom: 25px;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.values .value-item p {
-  clear: both;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: #000;
-}
-
-.values .value-item .h5,
-.values .value-item h5{
-  font-weight: 600;
-  font-size: 20px;
-  margin: 0 0;
-  min-height: 80px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  line-height: 30px;
-  letter-spacing: -0.857143px;
-  color: #000000;
-}
-
-.values.inline {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -30px -60px;
-  padding-bottom: 0;
-}
-
-.values.inline  .value-item .h4 {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
-
-  text-transform: uppercase;
-  display: block;
-  margin: 0;
-  padding: 0;
-
-  color: #000;
-
-}
-
-.values.inline  .value-item .icon {
-  float: none;
-  margin: 0 auto 30px;
-}
-
-.values.inline  .value-item {
-  background: none;
-  display: block;
-  max-width: 256px;
-  text-align: center;
-  box-shadow: none;
-  padding: 10px 20px;
-  margin: 0 5% 0 0;
-  min-width: 140px;
-  width: auto;
-}
-.section.section-feature.grey.grey-out .value-item .icon {
-  background: #fff;
-  padding-bottom: 0;
-  padding-right: 4px;
-}
-
-
-.section.section-feature.grey.grey-out .value-item .h4 {
-  color: inherit;
-  padding-right: 15px;
-}
-.section.section-feature.grey.grey-out .value-item {
-  background: none;
-  padding: 0;
-  box-shadow: none;
-  text-align: left;
-  color: #fff;
-}
-
-
-.smart-acc-item .h5 {
-
-  font-weight: 600;
-  margin-bottom: 4px;
-  font-size: 20px;
-  line-height: 30px;
-
-  letter-spacing: -0.857143px;
-
-  color: #000000;
-
-}
