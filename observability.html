@@ -31,7 +31,7 @@ https://templatemo.com/tm-591-villa-agency
 <body>
 
   <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
+  <!-- <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
       <div class="dots">
@@ -40,7 +40,7 @@ https://templatemo.com/tm-591-villa-agency
         <span></span>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- ***** Preloader End ***** -->
 <!--
   <div class="sub-header">
@@ -71,7 +71,7 @@ https://templatemo.com/tm-591-villa-agency
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
+                    <a class="logo">
                         <h1>Zaga</h1>
                     </a>
                     <!-- ***** Logo End ***** -->
@@ -80,9 +80,16 @@ https://templatemo.com/tm-591-villa-agency
                       <li><a href="observability.html" class="active">Observability</a></li>
                       <li><a href="sustainability.html">Sustainability</a></li>
                       <li><a href="blog.html">Blog</a></li>
-                      <li><a href="documentation.html">Documentation</a></li>
+                      <li class="dropdown">
+                        <a href="#">Documentation</a>
+                        <ul class="dropdown-content" id="drop-down">
+                          <a href="observability-doc.html" style="color: white !important;" >Observability</a>
+                          <a href="sustainability-doc.html" style="color: white !important;"
+                            >Sustainability</a>
+                        </ul>
+                      </li>
                       <li><a href="video.html">videos</a></li>
-                      <li><a href="#"><i class="fa fa-calendar"></i> Contact Us</a></li>
+                      <li><a href="contact.html"><i class="fa fa-calendar"></i> Contact Us</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -299,18 +306,18 @@ https://templatemo.com/tm-591-villa-agency
           <p>Observability, the key to understanding and managing complex systems, is built upon three pillars that empower leaders in business and IT with insights for effective systems management.
           <br><br>
  <strong>1. Performance Metrics:</strong><br>
-                     - Definition: Numerical data showcasing system performance.
-                     - Significance: Metrics drive success, offering insights into trends and guiding decision-making.
+                     - Definition: Numerical data showcasing system performance.<br>
+                     - Significance: Metrics drive success, offering insights into trends and guiding decision-making.<br>
                      - Observability Advantage: Provides precise values for critical aspects like service indicators, latency, and downtime. Enables proactive identification of potential issues.
                   <br> <br>
                   <strong>2. Logs - Gathering and Analysis:</strong><br>
-                     - Definition: Detailed records of software, user actions, and network activities.
-                     - Significance: Logs offer valuable information on system health and events.
+                     - Definition: Detailed records of software, user actions, and network activities.<br>
+                     - Significance: Logs offer valuable information on system health and events.<br>
                      - Observability Advantage: Centralized collection and correlation of logs alongside other insights. Enhances visibility across the enterprise, accelerates response times, and supports proactive issue resolution.
                    <br><br>
                    <strong> 3. Traces:</strong><br>
-                     - Definition: Records the end-to-end journey of calls in a distributed system.
-                     - Significance: Traces highlight touchpoints and interactions during transactions.
+                     - Definition: Records the end-to-end journey of calls in a distributed system.<br>
+                     - Significance: Traces highlight touchpoints and interactions during transactions.<br>
                      - Observability Advantage: Distributed tracing for rapid execution. Provides domain- and system-agnostic visibility, helping pinpoint failures swiftly across applications, networks, and systems. Ensures continuous monitoring until resolution, safeguarding service delivery and user experience.
         </p>     </div>
         <!-- Three  -->
