@@ -2161,7 +2161,7 @@ Free-trial Style
 }
 
 .modal {
-  display: flex;
+  display: none;
   position: fixed;
   overflow: hidden;
   width: 100%;
