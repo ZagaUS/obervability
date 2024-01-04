@@ -98,8 +98,8 @@ https://templatemo.com/tm-591-villa-agency
           </div>
            <div class="col-lg-12">
              <fieldset>
-               <label for="companyEmail">Company Email Address</label>
-               <input type="email" name="companyEmail" id="companyEmail" pattern="[a-zA-Z0-9._%+-]+@(?!gmail\.com|yahoo\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Your E-mail..." required title="Please enter a valid business email address">
+               <label for="companyEmail">Company Email Address</label>   
+               <input type="email" name="companyEmail" id="companyEmail" onblur="validateEmail()" placeholder="Your E-mail..." required title="Please enter a valid business email address">
              </fieldset>
            </div>
            <div class="col-lg-12">
@@ -172,6 +172,27 @@ https://templatemo.com/tm-591-villa-agency
         // });
         // });
 
+        }
+      </script>
+      <script>
+        function validateEmail() {
+          var emailInput = document.getElementById('email');
+          var forbiddenDomains = ['gmail.com', 'yahoo.com'];
+      
+          var email = emailInput.value.toLowerCase();
+          var isValid = true;
+      
+          for (var i = 0; i < forbiddenDomains.length; i++) {
+            if (email.includes('@' + forbiddenDomains[i])) {
+              isValid = false;
+              break;
+            }
+          }
+      
+          if (!isValid) {
+            alert('Email from Gmail and Yahoo domains are not allowed.');
+            emailInput.value = ''; // Clear the input if not valid
+          }
         }
       </script>
 </body>
