@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>ZAGA Website</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +56,7 @@ https://templatemo.com/tm-591-villa-agency
                             >Sustainability</a>
                         </ul>
                       <li><a href="video.html">videos</a></li>
-                      <li><a href="#contact-form" class="active"> <i class="fa fa-calendar"></i> Contact Us</a></li>
+                      <li><a href="contact.html"active"> <i class="fa fa-calendar"></i> Contact Us</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -71,8 +72,8 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-4 offset-lg-4">
           <div class="section-heading text-center">
-            <h6 style="font-size: larger;">Contact Us</h6>
-            <h2>Get In Touch With ZAGA</h2>
+            <!-- <h6>Contact Us</h6> -->
+            <h2>Register to get your free trial</h2>
           </div>
         </div>
       </div>
@@ -81,8 +82,7 @@ https://templatemo.com/tm-591-villa-agency
 <div class="contact-content">
     <div class="container">
       <div class="col-lg-12">
-        <form id="contact-form" onsubmit="sendMail(); reset(); return false;" action="" method="post">
-       <!-- <form id="contact-form" action="" method="post"> -->
+       <form id="contact-form" action="" method="post">
          <div class="row">
            <div class="col-lg-12">
              <fieldset>
@@ -91,26 +91,32 @@ https://templatemo.com/tm-591-villa-agency
              </fieldset>
            </div>
            <div class="col-lg-12">
+            <fieldset>
+              <label for="companyName">Company Name</label>
+              <input type="name" name="companyName" id="companyName" placeholder="Your Company Name..." autocomplete="on" required>
+            </fieldset>
+          </div>
+           <div class="col-lg-12">
              <fieldset>
-               <label for="email">Email Address</label>
-               <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+               <label for="companyEmail">Company Email Address</label>
+               <input type="email" name="companyEmail" id="companyEmail" pattern="[a-zA-Z0-9._%+-]+@(?!gmail\.com|yahoo\.com)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Your E-mail..." required title="Please enter a valid business email address">
              </fieldset>
            </div>
            <div class="col-lg-12">
              <fieldset>
-               <label for="subject">Subject</label>
-               <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on" >
+               <label for="location">Location</label>
+               <input type="location" name="location" id="location" placeholder="Your location..." autocomplete="on" >
              </fieldset>
            </div>
            <div class="col-lg-12">
              <fieldset>
-               <label for="message">Message</label>
-               <textarea name="message" id="message" placeholder="Your Message"></textarea>
+               <label for="phoneNo">Phone number</label>
+               <input type="phoneNo" name="phoneNo" id="phoneNo" placeholder="Your Phone Number" autocomplete="on" >
              </fieldset>
            </div>
            <div class="col-lg-12">
              <fieldset>
-               <button type="submit" id="form-submit" class="orange-button">Send Message</button>
+               <button type="submit" id="form-submit" class="orange-button" onclick="logToConsole()">Register</button>
              </fieldset>
            </div>
          </div>
@@ -118,8 +124,55 @@ https://templatemo.com/tm-591-villa-agency
      </div>
     </div>
     </div>
+    <footer>
+        <div class="container">
+          <div class="col-lg-8">
+            <p>Copyright © zaga open source. </p>
+            </div>
+        </div>
+      </footer>
+
+      <script>
+        function logToConsole() {
+        //     $(document).ready(function () {
+        // // Handle form submission
+        // $("#contact-form").submit(function (event) {
+        //     event.preventDefault(); // Prevent default form submission
+            console.log("Button Clicked!!");
+
+            var user = {
+                name: $("#name").val(),
+                phoneNo: $("#phoneNo").val(),
+                location: $("#location").val(),
+                // address: $("#address").val(),
+                companyEmail: $("#companyEmail").val(),
+                companyName: $("#companyName").val(),
+
+            };
+
+            // Make Ajax request to the server
+            $.ajax({
+                type: "POST",
+                url: "http://trialuser-management-testing-space.apps.zagaopenshift.zagaopensource.com/trialuser/create", // Replace with the actual server endpoint
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                data: JSON.stringify(user),
+                // success: function (response) {
+                //     console.log("User registered successfully:", response);
+                //     // Handle success, e.g., display a success message to the user
+                // },
+                // error: function (error) {
+                //     console.error("Error registering user:", error);
+                //     // Handle error, e.g., display an error message to the user
+                // }
+            });
+            alert("user registered successfully")
+            console.log(user)
+        // });
+        // });
+
+        }
+      </script>
 </body>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="emailsend.js"></script>
 </html>

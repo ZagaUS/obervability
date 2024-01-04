@@ -2137,7 +2137,7 @@ Free-trial Style
 
 .trial-section h2{
   margin-top: 75px;
-  margin-left: 500px;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -2155,10 +2155,34 @@ Free-trial Style
   background-color: #000;
   color: white;
 }
-
-.trial-section button:hover{
-  background-color: #F55328;
+#openModalBtn {
+  display: inline-block;
+  padding: 15px 20px; /* Adjust the top and bottom padding as needed */
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-left: 100px;
+  transition: background-color 0.3s ease;
 }
+
+#openModalBtn:hover {
+  background-color: #e65100;
+}
+/* 
+.trial-section a{
+  margin-left: 100px;
+  position: inherit;
+  border-radius: 7px;
+  border-color: white;
+  block-size: 100px;
+  background-color: #000;
+  color: white;
+  
+}
+.trial-section a:hover{
+  background-color: #F55328;
+} */
 
 .modal {
   display: none;
@@ -2166,25 +2190,117 @@ Free-trial Style
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-
+  /* background-color: rgba(0, 0, 0, 0.5);
+    */
+  background-color: #f7f3f3;
 }
 
 .modal .modal-content {
-  background-color: #fefefe;
+  /* background-color: #fefefe; */
+  color: rgb(14, 13, 13);
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px;
   width: 40%;
-  height: 70%;
+  height: 93%;
   margin-left: 30%;
-  margin-top: 7%;
+  margin-top: 2%;
+  background-color: rgba(0, 0, 0, 0.12);
+  text-align: justify;
 }
 
+.close {
+  color: #000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content span{
+  color: #252525;
+  text-align: end;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.modal-content span:hover,
+.modal-content span:focus {
+  color: rgb(165, 165, 165);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.justified-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+}
+
+.justified-form label {
+  /* flex: 1; */
+  font-size: large;
+  text-align: left;
+  /* margin-right: 10px; */
+}
+
+.justified-form input,
+.justified-form textarea {
+  flex: 2;
+  margin-bottom: 1px;
+  border-radius: 5px;
+}
+
+.submit-button button{
+  text-align: center;
+  border-radius: 7px;
+  border-color: rgb(14, 13, 13);
+  block-size: 60px;
+  width: 100px;
+  margin-left: 300px;
+  background-color: #000;
+  color: white;
+  justify-items: center;
+
+}
+
+.dialog-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+/* Close button styles */
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover,
@@ -2193,3 +2309,100 @@ Free-trial Style
   text-decoration: none;
   cursor: pointer;
 }
+
+/* .modal #map {
+  margin-top: 100px;
+}
+
+.modal .section-heading {
+  margin-bottom: 40px;
+  margin-right: 280px;
+}
+
+.modal p {
+  margin-bottom: 50px;
+}
+
+.modal.item {
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  padding: 35px 30px;
+  background-color: #fff;
+  display: inline-block;
+  min-width: 360px;
+}
+
+.modal .phone {
+  margin-bottom: 30px;
+}
+
+.modal .item img {
+  float: left;
+  margin-right: 25px;
+  vertical-align: middle;
+}
+
+.modal .item h6 {
+  font-size: 20px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.modal .item h6 span {
+  font-size: 15px;
+  color: #aaaaaa;
+  font-weight: 400;
+}
+
+.modal #contact-form {
+  margin-left: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  padding: 35px 30px;
+  background-color: #fff;
+}
+
+.modal #contact-form label {
+  font-size: 15px;
+  color: #3a3a3a;
+  margin-bottom: 15px;
+}
+
+.modal #contact-form input {
+  width: 100%;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #f6f6f6;
+  border: none;
+  margin-bottom: 30px;
+  font-size: 14px;
+  padding: 0px 15px;
+}
+
+.modal #contact-form textarea {
+  width: 100%;
+  height: 150px;
+  max-height: 180px;
+  border-radius: 22px;
+  background-color: #f6f6f6;
+  border: none;
+  margin-bottom: 40px;
+  font-size: 14px;
+  padding: 15px 15px;
+}
+
+.modal #contact-form button {
+  background-color: #1e1e1e;
+  height: 44px;
+  border-radius: 22px;
+  padding: 0px 20px;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all .5s;
+}
+
+.modal #contact-form button:hover {
+  background-color: #f35525;
+} */

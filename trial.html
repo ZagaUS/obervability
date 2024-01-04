@@ -81,7 +81,7 @@ https://templatemo.com/tm-591-villa-agency
                       <li><a href="sustainability.html">Sustainability</a></li>
                       <!-- <li><a href="blog.html">Blog</a></li> -->
                       <li><a href="trial.html" class="active">Free Trial</a></li>
-                      <li><a href="pricing.html">Pricing</a></li>
+                      <!-- <li><a href="pricing.html">Pricing</a></li> -->
                       <li class="dropdown">
                         <a href="#">Documentation</a>
                         <ul class="dropdown-content" id="drop-down">
@@ -128,7 +128,7 @@ https://templatemo.com/tm-591-villa-agency
   <h3>Free Trial Offer:</h3><br>
   <p>
   <strong>Duration:</strong>
-  30 days of full access to all features.<br><br>
+  7 days of full access to all features.<br><br>
   <strong>What's Included:</strong>
   Real-time monitoring, comprehensive logging, distributed tracing, anomaly detection, and intelligent alerting.<br><br>
   </p>
@@ -143,36 +143,58 @@ https://templatemo.com/tm-591-villa-agency
     Start your free trial today and experience the difference ZAGA Observability Solution can make for your applications. Don't miss out on this opportunity to enhance your observability journey!<br><br>
   </p>
 
-  <button id="openModalBtn" onclick="openModal()">Start your free trial</button>
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <form id="myForm">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required><br><br>
+  <a href="registration.html" id="openModalBtn">Start your free trial</a>
+  <!-- <div class="modal"> --></div>
 
-          <label for="companyName">Company Name:</label>
-          <input type="text" id="companyName" name="companyName" required><br><br>
-
-          <label for="email">Company Email:</label>
-          <input type="email" id="email" name="email" required><br><br>
-
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required><br><br>
-
-          <label for="location">Location:</label>
-          <input type="text" id="location" name="location" required><br><br>
-
-          <label for="companyAddress">Company Address:</label>
-          <textarea id="companyAddress" name="companyAddress" rows="4" required></textarea><br><br>
-
-          <input style="margin-left: 40%;" type="submit" value="Register">
+<!-- Separate div for contact content -->
+<div class="contact-content" id="contactContent" style="display: none;">
+  <div class="container">
+    <div class="col-lg-12">
+      <form id="contact-form" action="" method="post">
+        <div class="row">
+          <div class="col-lg-12">
+            <fieldset>
+              <label for="name">Full Name</label>
+              <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+            </fieldset>
+          </div>
+          <div class="col-lg-12">
+            <fieldset>
+              <label for="email">Email Address</label>
+              <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+            </fieldset>
+          </div>
+          <div class="col-lg-12">
+            <fieldset>
+              <label for="subject">Subject</label>
+              <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
+            </fieldset>
+          </div>
+          <div class="col-lg-12">
+            <fieldset>
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="Your Message"></textarea>
+            </fieldset>
+          </div>
+          <div class="col-lg-12">
+            <fieldset>
+              <button type="submit" id="form-submit" class="orange-button">Send Message</button>
+            </fieldset>
+          </div>
+        </div>
       </form>
+    </div>
   </div>
 </div>
+
+
+
 </div>
-
-
+<div id="successModal" class="dialog-modal">
+  <div class="dialog-content">
+      <span class="close" onclick="closeSuccessModal()">&times;</span>
+      <p>Successfully registered! Please check your email for more details.</p>
+  </div>
 </div>
 
   <footer>
@@ -246,11 +268,16 @@ document.querySelectorAll('.sticky-side .side-nav li a').forEach((link) => {
 
   </script>
   <script>
+
+function openModal() {
+    // Show the contact-content div
+    document.getElementById('contactContent').style.display = 'block';
+  
     // Get the modal element
-var modal = document.getElementById('myModal');
+var modal = document.getElementById('contactContent');
 
 // Get the button that opens the modal
-var btn = document.getElementById('openModalBtn');
+var btn = document.getElementById('contactContent');
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName('close')[0];
@@ -276,8 +303,38 @@ window.addEventListener('click', function(event) {
     if (event.target === modal) {
         closeModal();
     }
-});
+});}
 
+function validateAndSubmit() {
+        var emailInput = document.getElementById("email");
+        var email = emailInput.value;
+
+        // Basic email validation using a regular expression
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Extract the domain from the email address
+        var domain = email.split('@')[1];
+
+        // Check if the email domain is Gmail or Yahoo
+        if (domain.toLowerCase() === 'gmail.com' || domain.toLowerCase() === 'yahoo.com') {
+            alert("Please use a non-Gmail and non-Yahoo email address.");
+            return;
+        }
+
+        // Additional validation logic can be added here
+
+        // Display the success modal
+        document.getElementById("successModal").style.display = "block";
+    }
+
+    // function closeSuccessModal() {
+    //     // Close the success modal
+    //     document.getElementById("successModal").style.display = "none";
+    // }
   </script>
   </body>
 </html>
