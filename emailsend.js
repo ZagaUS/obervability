@@ -16,7 +16,7 @@ function sendMail() {
         }).then(
             message => {
                 if(message=='OK'){
-                    swal("We will get back to you!", "success");
+                    swal("Thanks for contacting us. We will get back to you ASAP!");
                 }
                 else{
                     swal("Error", "error");

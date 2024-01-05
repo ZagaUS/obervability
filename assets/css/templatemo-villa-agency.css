@@ -2134,11 +2134,15 @@ DOcumentation Style
 Free-trial Style
 --------------------------------------------- 
 */
-
+.trial-section h3{
+  margin-left: 100px;
+  text-align: left;
+}
 .trial-section h2{
   margin-top: 75px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
+  margin-left: 100px;
 }
 
 .trial-section p{
@@ -2410,3 +2414,13 @@ Free-trial Style
 /* .contact-content .col-lg-12 a:hover{
   background-color:  #e65100;
 } */
+
+video {
+  height: 300px;
+  width: 70%; /* Make the video player fill its container */
+  max-width: 400px; /* Set a maximum width for larger screens */ /* Center the video player */
+  display: block;
+  background-color: rgb(235, 233, 233);
+  justify-content: left;
+  justify-self: left;
+}

@@ -82,7 +82,7 @@ https://templatemo.com/tm-591-villa-agency
 <div class="contact-content">
     <div class="container">
       <div class="col-lg-12">
-       <form id="contact-form" action="" method="post">
+       <form id="contact-form" action="" method="post" onsubmit="SubmitForm(); reset(); return false">
          <div class="row">
            <div class="col-lg-12">
              <fieldset>
@@ -131,8 +131,10 @@ https://templatemo.com/tm-591-villa-agency
             </div>
         </div>
       </footer>
-
-      <script>
+      <script src="registration.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <!-- <script>
         function logToConsole() {
         //     $(document).ready(function () {
         // // Handle form submission
@@ -153,22 +155,26 @@ https://templatemo.com/tm-591-villa-agency
             // Make Ajax request to the server
             $.ajax({
                 type: "POST",
-                url: "https://trialuser-management-testing-space.apps.zagaopenshift.zagaopensource.com/trialuser/create", // Replace with the actual server endpoint
+                url: "http://localhost:8080/trialuser/create", // Replace with the actual server endpoint
                 headers: {
                     "Content-Type": "application/json",
                 },
                 data: JSON.stringify(user),
-                success: function (response) {
-                    console.log("User registered successfully:", response);
-                    // Handle success, e.g., display a success message to the user
-                    alert("user registered successfully")
-                window.location.href = "trial.html";
-                },
-                error: function (error) {
-                    console.error("Error registering user:", error);
-                    // Handle error, e.g., display an error message to the user
-                }
-            });
+                // success: function (response) {
+                //     console.log("User registered successfully:", response);
+                //     // Handle success, e.g., display a success message to the user
+                //     alert("user registered successfully")
+                // window.location.href = "trial.html";
+                // },
+                // error: function (error) {
+                //     console.error("Error registering user:", error);
+                //     // Handle error, e.g., display an error message to the user
+                // }
+            }).done(function (data) {
+              alert("user register successfully");
+              window.location.href = "trial.html"
+            })
+            ;
          
             console.log(user)
             
@@ -177,7 +183,7 @@ https://templatemo.com/tm-591-villa-agency
         // });
 
         }
-      </script>
+      </script> -->
       <script>
         function validateEmail() {
           var emailInput = document.getElementById('email');
