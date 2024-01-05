@@ -115,9 +115,9 @@ https://templatemo.com/tm-591-villa-agency
              </fieldset>
            </div>
            <div class="col-lg-12">
-             <fieldset>
-               <button type="submit" id="form-submit" class="orange-button" onclick="logToConsole()">Register</button>
-             </fieldset>
+            <button type="submit" id="form-submit" class="orange-button" onclick="logToConsole()">Register</button>
+               <!-- <a style="display: block; color:white; background-color: black; padding: 5px; width: 100px; height: 40px; justify-content: center; align-items: center;  text-align: center; border-radius: 20px;" href="trial.html" id="form-submit" class="orange-button" onclick="logToConsole()">Register</a> -->
+             <!-- <style>a:hover{background-color:  #e65100;}</style> -->
            </div>
          </div>
        </form>
@@ -158,17 +158,21 @@ https://templatemo.com/tm-591-villa-agency
                     "Content-Type": "application/json",
                 },
                 data: JSON.stringify(user),
-                // success: function (response) {
-                //     console.log("User registered successfully:", response);
-                //     // Handle success, e.g., display a success message to the user
-                // },
-                // error: function (error) {
-                //     console.error("Error registering user:", error);
-                //     // Handle error, e.g., display an error message to the user
-                // }
+                success: function (response) {
+                    console.log("User registered successfully:", response);
+                    // Handle success, e.g., display a success message to the user
+                    alert("user registered successfully")
+                window.location.href = "trial.html";
+                },
+                error: function (error) {
+                    console.error("Error registering user:", error);
+                    // Handle error, e.g., display an error message to the user
+                }
             });
-            alert("user registered successfully")
+         
             console.log(user)
+            
+            
         // });
         // });
 
