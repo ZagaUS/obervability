@@ -105,15 +105,33 @@ https://templatemo.com/tm-591-villa-agency
            <div class="col-lg-12">
              <fieldset>
                <label for="location">Location</label>
-               <input type="location" name="location" id="location" placeholder="Your location..." autocomplete="on" >
+               <input type="location" name="location" id="location" placeholder="Your location..." autocomplete="on" required>
              </fieldset>
            </div>
            <div class="col-lg-12">
              <fieldset>
                <label for="phoneNo">Phone number</label>
-               <input type="phoneNo" name="phoneNo" id="phoneNo" placeholder="Your Phone Number" autocomplete="on" >
+               <input type="number" name="phoneNo" id="phoneNo" placeholder="Your Phone Number" autocomplete="on" oninput="validatePhoneNumber()" required >
              </fieldset>
            </div>
+           <div class="col-lg-12">
+            <fieldset>
+              <label for="role">Role</label>
+              <input type="text" name="role" id="role" placeholder="Your Role" autocomplete="on" required>
+            </fieldset>
+          </div>
+          <div class="col-lg-12">
+            <fieldset>
+              <label for="department">Department</label>
+              <input type="text" name="department" id="department" placeholder="Your Department" autocomplete="on" required>
+            </fieldset>
+          </div>
+          <div class="col-lg-12">
+            <fieldset>
+              <label for="workPhone"> Work Phone number</label>
+              <input type="number" name="workPhone" id="workPhone" placeholder="Your Work Phone Number" autocomplete="on" required>
+            </fieldset>
+          </div>
            <div class="col-lg-12">
             <button type="submit" id="form-submit" class="orange-button" onclick="logToConsole()">Register</button>
                <!-- <a style="display: block; color:white; background-color: black; padding: 5px; width: 100px; height: 40px; justify-content: center; align-items: center;  text-align: center; border-radius: 20px;" href="trial.html" id="form-submit" class="orange-button" onclick="logToConsole()">Register</a> -->
@@ -186,7 +204,7 @@ https://templatemo.com/tm-591-villa-agency
       </script> -->
       <script>
         function validateEmail() {
-          var emailInput = document.getElementById('email');
+          var emailInput = document.getElementById('companyEmail');
           var forbiddenDomains = ['gmail.com', 'yahoo.com'];
       
           var email = emailInput.value.toLowerCase();
@@ -200,8 +218,9 @@ https://templatemo.com/tm-591-villa-agency
           }
       
           if (!isValid) {
-            alert('Email from Gmail and Yahoo domains are not allowed.');
-            emailInput.value = ''; // Clear the input if not valid
+            emailInput.setCustomValidity('Use Business Email. Gmail and Yahoo are not recommended.');
+          } else {
+            emailInput.setCustomValidity('');
           }
         }
       </script>
