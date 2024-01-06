@@ -397,6 +397,19 @@ Header Style
   transition: all .5s ease 0s;
 }
 
+.header-sticky {
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  -webkit-transition: all .5s ease 0s;
+  -moz-transition: all .5s ease 0s;
+  -o-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+}
+
 .header-area .main-nav {
   background: transparent;
   display: flex;
@@ -2098,6 +2111,7 @@ DOcumentation Style
   background-color: rgba(155, 155, 155, 0.12);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
+  margin-top: 100px;
   /* opacity: 0.9s; */
 }
 
@@ -2139,7 +2153,7 @@ Free-trial Style
   text-align: left;
 }
 .trial-section h2{
-  margin-top: 75px;
+  margin-top: 140px;
   text-align: left;
   margin-bottom: 20px;
   margin-left: 100px;
