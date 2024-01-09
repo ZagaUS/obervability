@@ -78,9 +78,9 @@ function navigatePage() {
 function sendMailRegistration(name,username,password,emailID,expiryDate) {
 
     Email.send({
-        SecureToken : "9f4c4f41-276b-4c7d-bc20-1c28be67816d",
+        SecureToken : "40d3fdf4-f62a-47da-b21c-99af6404e551",
         To : emailID,
-        From : "surendhar030298@gmail.com",
+        From : "sales@zagaopensource.com",
         Subject : "Regarding Virtual Machine",
         Body : `<!DOCTYPE html>
         <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">

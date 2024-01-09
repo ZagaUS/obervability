@@ -8,9 +8,9 @@ function sendMail() {
     var messageBody = "Name :-" + userName + "  Mail Address:- " + email + "   message :- " + message
 
     Email.send({
-        SecureToken : "9f4c4f41-276b-4c7d-bc20-1c28be67816d",
-        To : "sharanya.june7@gmail.com",
-        From : "surendhar030298@gmail.com",
+        SecureToken : "40d3fdf4-f62a-47da-b21c-99af6404e551",
+        To : "sales@zagaopensource.com",
+        From : "sales@zagaopensource.com",
         Subject : subject,
         Body : messageBody
         }).then(
