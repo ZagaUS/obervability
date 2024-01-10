@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/plan.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
@@ -103,9 +104,71 @@ https://templatemo.com/tm-591-villa-agency
         </div>
     </div>
   </header>
+  <section class="pricing pt-5 mt-5 mb-5">
+    <div class="pricing-container">
+        <div class="pricing-head text-center mb-3">
+            Plans & Pricing
+        </div>
+        <div class="top">
+          <div class="toggle-btn">
+            <span style="margin: 0.8em;">Basic</span>
+            <label class="switch">
+              <input type="checkbox" id="checbox" onclick="check()" ; />
+              <span class="slider round"></span>
+            </label>
+            <span style="margin: 0.8em;">Advanced</span></div>
+        </div>
+    
+        <div class="package-container">
+          <div class="packages">
+              <div class="pricing-title pb-3">
+                Free
+              </div>
+            <ul class="list text-center">
+              <li>100mb upload limit for per domain</li>
+              <li>68 hours validity for all domains.</li>
+              <li>3 domain for per a week</li>
+              <li>Ticket Support</li>
+            </ul>
+            <a href="#" class="button pricing-button">Start Now</a>
+          </div>
+          <div class="packages">
+            <div class="pricing-title">
+                Pro
+            </div>                    
+            <h2 class="text1">&dollar;19.99</h2>
+            <h2 class="text2">&dollar;239.99</h2>
+            <ul class="list">
+              <li>5GB upload limit for per domain</li>
+              <li>68 hours validity for all domains.</li>
+              <li>7 domain for per a week</li>
+              <li>Ticket Support</li>
+              <li>E-mail Support 7/24</li>
+            </ul>
+            <a href="#" class="button pricing-button">Start Now</a>
+          </div>
+          <div class="packages">
+            <div class="pricing-title">
+                Business
+            </div>                   
+            <h2 class="text1">&dollar;29.99</h2>
+            <h2 class="text2">&dollar;359.99</h2>
+            <ul class="list">
+              <li>2GB upload limit for per domain</li>
+              <li>Limitless validity for all domains.</li>
+              <li>Limitless domain</li>
+              <li>Full Support Package</li>
+            </ul>
+            <a href="#" class="button pricing-button">Let's Talk</a>
+          </div>
+        </div>
+      </div> 
+</section>
+  <script src="script.js"></script>
+<!-- </body> -->
 
 
-  <div class="contact section">
+  <!-- <div class="contact section">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 offset-lg-4">
@@ -157,7 +220,7 @@ https://templatemo.com/tm-591-villa-agency
    </form>
  </div>
 </div>
-</div>
+</div> -->
 
   <footer>
     <div class="container">
@@ -180,52 +243,22 @@ https://templatemo.com/tm-591-villa-agency
   <script src="https://unpkg.com/smooth-scroll@17/dist/smooth-scroll.min.js"></script>
 
   <script>
-    // JavaScript code to toggle the active class
-    // var scroll = new SmoothScroll('a[href*="#"]');
-    // var sideNav = document.getElementById('sideNav');
-    // var links = sideNav.getElementsByTagName('a');
-
-    // for (var i = 0; i < links.length; i++) {
-    //   links[i].addEventListener('click', function() {
-    //     event.preventDefault();
-    //     // Remove 'active' class from all links
-    //     for (var j = 0; j < links.length; j++) {
-    //       links[j].parentNode.classList.remove('current');
-    //     }
-
-    //     // Add 'active' class to the clicked link's parent
-    //     this.parentNode.classList.add('current');
-    //   });
-    // }
-
-    // Function to handle intersection changes
-function handleIntersection(entries, observer) {
-  entries.forEach((entry) => {
-    const id = entry.target.getAttribute('id');
-    const navLink = document.querySelector(`a[href="#${id}"]`).parentNode;
-
-    if (entry.isIntersecting) {
-      navLink.classList.add('current');
-    } else {
-      navLink.classList.remove('current');
-    }
-  });
-}
-
-// Create an Intersection Observer
-const observer = new IntersectionObserver(handleIntersection, {
-  rootMargin: '-30% 0px -70% 0px', // Adjust as needed
-});
-
-// Get all section elements and observe them
-document.querySelectorAll('.sticky-side .side-nav li a').forEach((link) => {
-  const targetId = link.getAttribute('href').substring(1); // Remove the '#'
-  const targetElement = document.getElementById(targetId);
-
-  if (targetElement) {
-    observer.observe(targetElement);
+ function check() {
+	var checkBox = document.getElementById("checbox");
+	var text1 = document.getElementsByClassName("text1");
+	var text2 = document.getElementsByClassName("text2");
+  
+	for (var i = 0; i < text1.length; i++) {
+	  if (checkBox.checked == true) {
+		text1[i].style.display = "block";
+		text2[i].style.display = "none";
+	  } else if (checkBox.checked == false) {
+		text1[i].style.display = "none";
+		text2[i].style.display = "block";
+	  }
+	}
   }
-});
+  check();
 
 
   </script>
