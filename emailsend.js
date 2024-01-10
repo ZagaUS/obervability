@@ -5,12 +5,12 @@ function sendMail() {
     var message = document.getElementById('message').value;
     var subject = document.getElementById('subject').value;
     
-    var messageBody = "Name :-" + userName + "  Mail Address:- " + email + "   message :- " + message
+    var messageBody = "Name :" + userName + "  Mail Address: " + email + "   message : " + message + "Subject: " + subject
 
     Email.send({
-        SecureToken : "40d3fdf4-f62a-47da-b21c-99af6404e551",
-        To : "sales@zagaopensource.com",
-        From : "sales@zagaopensource.com",
+        SecureToken : "9f4c4f41-276b-4c7d-bc20-1c28be67816d",
+        To : 'sales@zagaopensource.com',
+        From : "surendhar030298@gmail.com",
         Subject : subject,
         Body : messageBody
         }).then(
